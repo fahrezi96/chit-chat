@@ -1,0 +1,196 @@
+// sass --watch styles.scss:styles.css
+
+@import "_resources.scss";
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none!important;
+	color: black;
+}
+
+
+// /////////////////////////////////////////////////////////////////////////////////////////////////
+
+div.chat-container {
+	display: flex;
+	height: 576px;
+}
+
+div.aside-section {
+	width: 250px;
+	overflow-y: auto;
+	background-color: white;
+	overflow-y: auto;
+	box-shadow: 1px 1px 1px grey;
+
+	&::-webkit-scrollbar-track {
+        background-color: #eeeeee;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: $deep-purple, $alpha: .6);
+    }
+}
+
+div.aside-head-section {
+	padding: 7px 5px;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 250px;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0px 1px 1px grey;
+
+}
+
+div.aside-body-section {
+	margin-top: 55px;
+	
+	&>a.person {
+		display: flex;
+		padding: 7px 5px;
+		border-top: solid 1px lightgray;
+		transition: all .2s;
+		position: relative;
+
+		&:hover {
+			background-color: rgba($color: $deep-purple, $alpha: .1);
+			color: $deep-purple;
+		}
+	}
+
+	&>a.person.active-chat {
+		background-color: rgba($color: $deep-purple, $alpha: .1);
+		color: $deep-purple;
+	}
+
+	span.middle-section {
+		margin: 0 5px;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+	}
+
+	span.name {
+		font-weight: 600;
+	}
+
+	span.message {
+		display: inline-block;
+		white-space: nowrap; 
+		width: 100px; 
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	span.datetime {
+		font-size: 11px;
+	}
+
+	span.indicator {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		position: absolute;
+	    bottom: 5px;
+	    right: 5px;
+	}
+
+	span.indicator.off {
+		background-color: grey;
+	}
+
+	span.indicator.on {
+		background-color: chartreuse;
+	}
+}
+
+div.search-box {
+	display: flex;
+	align-items: center;
+
+	input[type=text] {
+		border: none;
+	    padding: 5px;
+	    outline: none;
+	    width: 150px;
+	}
+}
+
+div.chat-btn {
+	position: absolute;
+    right: -25px;
+    bottom: 47%;
+    border-radius: 50%;
+    background-color: white;
+
+    &>a {
+    	background-color: $deep-purple;
+    	border: solid 2px $deep-purple;
+    	color: white;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    width: 50px;
+	    height: 50px;
+	    border-radius: 50%;
+	    transition: all .3s;
+	    box-shadow: 0px 0px 30px $deep-purple;
+
+	    &:hover {
+	    	background-color: rgba($color: $deep-purple, $alpha: .1);
+	    	color: $deep-purple;
+	    }
+    }
+}
+
+div.chat-trigger {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+
+	a.open-chat {
+		background-color: $deep-purple;
+    	border: solid 2px $deep-purple;
+    	color: white;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    width: 50px;
+	    height: 50px;
+	    border-radius: 50%;
+	    transition: all .3s;
+	    box-shadow: 0px 0px 30px $deep-purple;
+
+	    &:hover {
+	    	background-color: rgba($color: $deep-purple, $alpha: .1);
+	    	color: $deep-purple;
+	    }
+	}
+}
+
+div.main-section {
+	background-color: #fafafa;
+	flex-grow: 1;
+}
