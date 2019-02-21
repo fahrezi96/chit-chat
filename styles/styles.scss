@@ -338,6 +338,8 @@ div.chat-box {
 	input[type=text] {
 		width: 95%;
 		border: solid 1px lightgray;
+		outline: none;
+		transition: all .6s;
 
 		&:focus {
 			border-color: $deep-purple;

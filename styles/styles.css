@@ -728,7 +728,9 @@ div.chat-box {
   flex-grow: 1; }
   div.chat-box input[type=text] {
     width: 95%;
-    border: solid 1px lightgray; }
+    border: solid 1px lightgray;
+    outline: none;
+    transition: all .6s; }
     div.chat-box input[type=text]:focus {
       border-color: #673ab7; }
 
