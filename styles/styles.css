@@ -730,7 +730,8 @@ div.chat-box {
     width: 95%;
     border: solid 1px lightgray;
     outline: none;
-    transition: all .6s; }
+    transition: all .4s;
+    padding: 5px; }
     div.chat-box input[type=text]:focus {
       border-color: #673ab7; }
 
