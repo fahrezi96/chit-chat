@@ -713,7 +713,6 @@ div.main-head-section {
 
 div.main-body-section {
   margin-top: 60px;
-  margin-bottom: 100px;
   width: 100%; }
 
 div.landing-page {
@@ -737,7 +736,8 @@ div.landing-page {
 
 div.chat-conversation {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 100px; }
 
 div.active-page {
   display: flex; }
