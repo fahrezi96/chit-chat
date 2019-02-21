@@ -508,8 +508,7 @@ div.aside-section {
   width: 250px;
   overflow-y: auto;
   background-color: white;
-  overflow-y: auto;
-  box-shadow: 1px 1px 1px grey; }
+  overflow-y: auto; }
   div.aside-section::-webkit-scrollbar-track {
     background-color: #eeeeee; }
   div.aside-section::-webkit-scrollbar {
@@ -519,7 +518,7 @@ div.aside-section {
     background-color: rgba(103, 58, 183, 0.6); }
 
 div.aside-head-section {
-  padding: 7px 5px;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -527,10 +526,14 @@ div.aside-head-section {
   width: 250px;
   background-color: white;
   z-index: 1;
-  box-shadow: 0px 1px 1px grey; }
+  box-shadow: -1px 1px 1px grey;
+  border-right: solid 1px lightgray;
+  height: 60px; }
+  div.aside-head-section div.profil-img {
+    flex-grow: 1; }
 
 div.aside-body-section {
-  margin-top: 55px; }
+  margin-top: 60px; }
   div.aside-body-section > a.person {
     display: flex;
     padding: 7px 5px;
@@ -605,9 +608,7 @@ div.chat-btn {
 div.chat-trigger {
   position: absolute;
   right: 30px;
-  bottom: 30px;
-  width: 100px;
-  height: 100px; }
+  bottom: 30px; }
   div.chat-trigger a {
     background-color: #673ab7;
     border: solid 2px #673ab7;
@@ -630,15 +631,18 @@ div.chat-trigger {
     right: 7px; }
     div.chat-trigger a.user-online i, div.chat-trigger a.unread-msg i {
       font-size: 16px; }
-  div.chat-trigger:hover a.unread-msg {
-    right: 60px; }
-    div.chat-trigger:hover a.unread-msg span {
-      opacity: 1; }
-  div.chat-trigger:hover a.user-online {
-    bottom: 60px; }
-    div.chat-trigger:hover a.user-online span {
-      opacity: 1;
-      background-color: #8bc34a; }
+  div.chat-trigger:hover {
+    width: 100px;
+    height: 100px; }
+    div.chat-trigger:hover a.unread-msg {
+      right: 60px; }
+      div.chat-trigger:hover a.unread-msg span {
+        opacity: 1; }
+    div.chat-trigger:hover a.user-online {
+      bottom: 60px; }
+      div.chat-trigger:hover a.user-online span {
+        opacity: 1;
+        background-color: #8bc34a; }
   div.chat-trigger span.note {
     display: flex;
     justify-content: center;
@@ -655,6 +659,77 @@ div.chat-trigger {
 
 div.main-section {
   background-color: #fafafa;
+  flex-grow: 1;
+  overflow-y: auto; }
+  div.main-section::-webkit-scrollbar-track {
+    background-color: #eeeeee; }
+  div.main-section::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent; }
+  div.main-section::-webkit-scrollbar-thumb {
+    background-color: rgba(103, 58, 183, 0.6); }
+
+div.main-head-section {
+  background-color: white;
+  padding: 0 10px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: -1px 1px 1px grey;
+  position: fixed;
+  width: 516px; }
+  div.main-head-section div.left-section {
+    display: flex;
+    align-items: center; }
+    div.main-head-section div.left-section p {
+      margin-bottom: 0; }
+    div.main-head-section div.left-section div.profile-img {
+      margin-right: 10px; }
+    div.main-head-section div.left-section p.name a {
+      font-weight: 600; }
+
+div.main-body-section {
+  margin-top: 60px;
+  margin-bottom: 100px; }
+
+div.chat-conversation {
+  display: flex;
+  flex-direction: column; }
+
+div.message-item {
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  width: 320px;
+  box-shadow: 0px 1px 3px grey;
+  display: flex;
+  flex-direction: column; }
+  div.message-item div.datetime {
+    font-size: 11px;
+    color: darkgray;
+    align-self: flex-end; }
+
+div.message-item.me {
+  align-self: flex-end;
+  background-color: rgba(103, 58, 183, 0.1); }
+
+div.main-foot-section {
+  position: fixed;
+  bottom: 1px;
+  background-color: white;
+  width: 516px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 0px 5px grey; }
+
+div.chat-box {
   flex-grow: 1; }
+  div.chat-box input[type=text] {
+    width: 95%;
+    border: solid 1px lightgray; }
+    div.chat-box input[type=text]:focus {
+      border-color: #673ab7; }
 
 /*# sourceMappingURL=styles.css.map */
