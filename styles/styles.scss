@@ -190,11 +190,6 @@ div.chat-trigger {
 	    position: absolute;
 		bottom: 0;
 		right: 0;
-
-	    // &:hover {
-	    // 	background-color: rgba($color: $deep-purple, $alpha: .1);
-	    // 	color: $deep-purple;
-	    // }
 	}
 
 	a.user-online, a.unread-msg {
@@ -328,7 +323,8 @@ div.main-foot-section {
     width: 516px;
 	padding: 10px;
 	display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
+	align-items: center;
     box-shadow: 2px 0px 5px grey;
 }
 
