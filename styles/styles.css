@@ -660,7 +660,8 @@ div.chat-trigger {
 div.main-section {
   background-color: #fafafa;
   flex-grow: 1;
-  overflow-y: auto; }
+  overflow-y: auto;
+  display: none; }
   div.main-section::-webkit-scrollbar-track {
     background-color: #eeeeee; }
   div.main-section::-webkit-scrollbar {
@@ -693,9 +694,31 @@ div.main-body-section {
   margin-top: 60px;
   margin-bottom: 100px; }
 
+div.landing-page {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  flex-grow: 1; }
+  div.landing-page div.chat-logo {
+    background-color: #673ab7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; }
+    div.landing-page div.chat-logo i {
+      font-size: 42px;
+      color: white; }
+
 div.chat-conversation {
   display: flex;
   flex-direction: column; }
+
+div.active-page {
+  display: flex; }
 
 div.message-item {
   background-color: white;
