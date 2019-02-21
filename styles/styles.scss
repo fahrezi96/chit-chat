@@ -65,7 +65,7 @@ div.aside-head-section {
 
 div.aside-body-section {
 	margin-top: 55px;
-	
+
 	&>a.person {
 		display: flex;
 		padding: 7px 5px;
@@ -169,8 +169,10 @@ div.chat-trigger {
 	position: absolute;
 	right: 30px;
 	bottom: 30px;
+	width: 100px;
+    height: 100px;
 
-	a.open-chat {
+	a {
 		background-color: $deep-purple;
     	border: solid 2px $deep-purple;
     	color: white;
@@ -183,10 +185,55 @@ div.chat-trigger {
 	    transition: all .3s;
 	    box-shadow: 0px 0px 30px $deep-purple;
 
-	    &:hover {
-	    	background-color: rgba($color: $deep-purple, $alpha: .1);
-	    	color: $deep-purple;
-	    }
+	    position: absolute;
+		bottom: 0;
+		right: 0;
+
+	    // &:hover {
+	    // 	background-color: rgba($color: $deep-purple, $alpha: .1);
+	    // 	color: $deep-purple;
+	    // }
+	}
+
+	a.user-online, a.unread-msg {
+		width: 35px;
+	    height: 35px;
+		bottom: 7px;
+		right: 7px;
+
+		i {font-size: 16px;}
+	}
+
+	&:hover a.unread-msg {
+		right: 60px;
+
+		span {
+			opacity: 1;
+		}
+	}
+
+	&:hover a.user-online {
+		bottom: 60px;
+
+		span {
+			opacity: 1;
+			background-color: $light-green;
+		}
+	}
+
+	span.note {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    width: 20px;
+	    height: 20px;
+	    background-color: $red;
+	    border-radius: 50%;
+	    position: absolute;
+	    top: -13px;
+	    right: 17px;
+	    font-size: 11px;
+	    opacity: 0;
 	}
 }
 

@@ -605,8 +605,10 @@ div.chat-btn {
 div.chat-trigger {
   position: absolute;
   right: 30px;
-  bottom: 30px; }
-  div.chat-trigger a.open-chat {
+  bottom: 30px;
+  width: 100px;
+  height: 100px; }
+  div.chat-trigger a {
     background-color: #673ab7;
     border: solid 2px #673ab7;
     color: white;
@@ -617,10 +619,39 @@ div.chat-trigger {
     height: 50px;
     border-radius: 50%;
     transition: all .3s;
-    box-shadow: 0px 0px 30px #673ab7; }
-    div.chat-trigger a.open-chat:hover {
-      background-color: rgba(103, 58, 183, 0.1);
-      color: #673ab7; }
+    box-shadow: 0px 0px 30px #673ab7;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  div.chat-trigger a.user-online, div.chat-trigger a.unread-msg {
+    width: 35px;
+    height: 35px;
+    bottom: 7px;
+    right: 7px; }
+    div.chat-trigger a.user-online i, div.chat-trigger a.unread-msg i {
+      font-size: 16px; }
+  div.chat-trigger:hover a.unread-msg {
+    right: 60px; }
+    div.chat-trigger:hover a.unread-msg span {
+      opacity: 1; }
+  div.chat-trigger:hover a.user-online {
+    bottom: 60px; }
+    div.chat-trigger:hover a.user-online span {
+      opacity: 1;
+      background-color: #8bc34a; }
+  div.chat-trigger span.note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #f44336;
+    border-radius: 50%;
+    position: absolute;
+    top: -13px;
+    right: 17px;
+    font-size: 11px;
+    opacity: 0; }
 
 div.main-section {
   background-color: #fafafa;
